@@ -1,32 +1,64 @@
 // bg colours #162B32#FF4838 txt white
 
+$textColor: #ff4838;
+
 body {
 	background: #162b32;
 	font-family: "Nunito", sans-serif;
 }
 
+.blur-text {
+	h2 {
+		color: $textColor;
+		font-weight: 100;
+		font-size: 1.8rem;
+	}
+	p {
+		font-weight: 100;
+		font-size: 1.125rem;
+		line-height: 2;
+	}
+}
+
 #mainNavbar {
 	font-size: 1.6rem;
 	font-weight: 100;
+	background: #162b32;
 	.navbar-brand {
 		font-size: 1.7rem;
-		color: #ff4838;
+		color: $textColor;
 	}
 	.nav-link {
 		color: white;
 		&:hover {
-			color: #ff4838;
+			color: $textColor;
 		}
 	}
 }
 
 #headingGroup {
 	span {
-		color: #ff4838;
+		color: $textColor;
 	}
 	h1 {
 		font-weight: 100;
-		font-size: 2rem;
+		font-size: 1.8rem;
+		transition: color 0.7s ease-in, transform 0.5s ease-out;
+		cursor: default;
+		&:hover {
+			color: $textColor;
+			transform: rotate(-6deg);
+		}
+	}
+}
+
+@keyframes runner {
+	0% {
+		transform: translateX(-100%);
+	}
+
+	100% {
+		transform: translateX(0);
 	}
 }
 
